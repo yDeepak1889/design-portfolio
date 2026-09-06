@@ -1,0 +1,72 @@
+/* ------------------------------------------------------------------
+   Design tokens
+   Single source of truth for colour, type, spacing and motion.
+   Change values here; components in styles.css only reference tokens.
+   ------------------------------------------------------------------ */
+
+:root {
+  /* Colour — warm editorial palette from the Figma file */
+  --color-bg: #f9f7f3;
+  --color-bg-elevated: #fdfcfa;
+  --color-ink: #1c1a17;
+  --color-ink-soft: #4a463f;
+  --color-ink-muted: #8a8378;
+  --color-ink-faint: #b5ada1;
+  --color-hairline: #e6e0d6;
+  --color-accent: #c4634a;
+  --color-accent-hover: #ad5540;
+  --color-accent-soft: #f3e4dd;
+  --color-image-frame: #e9e3d9;
+
+  /* Type */
+  --font-serif: "Cormorant Garamond", "Cormorant", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Fluid type scale (min → max between 360px and 1440px viewports) */
+  --text-display: clamp(2.375rem, 1.5rem + 3.6vw, 4.5rem);    /* hero */
+  --text-h2: clamp(1.875rem, 1.4rem + 1.8vw, 2.875rem);       /* section headlines */
+  --text-h3: clamp(1.5rem, 1.25rem + 0.9vw, 1.875rem);        /* skill titles */
+  --text-card-title: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);  /* work card */
+  --text-body-lg: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-body: 0.9375rem;
+  --text-small: 0.8125rem;
+  --text-label: 0.6875rem;                                     /* eyebrows, meta */
+
+  --leading-tight: 1.05;
+  --leading-snug: 1.2;
+  --leading-body: 1.65;
+
+  --tracking-label: 0.08em;
+  --tracking-display: -0.015em;
+
+  /* Spacing — 4px base */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  --section-gap: clamp(5rem, 3rem + 8vw, 10rem);
+  --gutter: clamp(1.25rem, 0.5rem + 3vw, 3rem);
+  --content-max: 1440px;
+
+  /* Shape */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-pill: 999px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 160ms;
+  --duration-base: 320ms;
+  --duration-slow: 720ms;
+
+  /* Layers */
+  --z-header: 50;
+  --z-toast: 100;
+}
