@@ -10,8 +10,22 @@ python3 -m http.server 4173
 # open http://localhost:4173
 ```
 
-Any static host works for deployment (GitHub Pages, Netlify, Vercel, Cloudflare Pages).
-Point it at the repo root.
+## GitHub Pages
+
+The site deploys from `main` via GitHub Actions (same pattern as [portfolio-v2](https://github.com/yDeepak1889/portfolio-v2)). Custom domain: `richadesigns.co`.
+
+At the domain registrar, point DNS at GitHub Pages:
+
+```
+Type  Name  Value
+A     @     185.199.108.153
+A     @     185.199.109.153
+A     @     185.199.110.153
+A     @     185.199.111.153
+CNAME www   yDeepak1889.github.io
+```
+
+Then in the repo: **Settings → Pages → Custom domain** `richadesigns.co`, and enable **Enforce HTTPS** once the certificate is ready. Keep any existing MX/TXT records if you use email on this domain.
 
 ## Structure
 
