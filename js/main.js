@@ -1,7 +1,7 @@
 /* ------------------------------------------------------------------
    Progressive enhancements
    The page is fully usable without this file. Everything here adds
-   polish: active-section nav, scroll reveal, copy-to-clipboard,
+   polish: active-section nav pill, scroll reveal, copy-to-clipboard,
    live local time and dynamic year.
    ------------------------------------------------------------------ */
 
@@ -11,14 +11,6 @@
   document.documentElement.classList.remove("no-js");
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  /* ---------- Header border once the page has scrolled ---------- */
-  const header = document.querySelector(".site-header");
-  if (header) {
-    const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-  }
 
   /* ---------- Highlight the nav item for the section in view ---------- */
   const navLinks = Array.from(document.querySelectorAll('.site-nav a[href^="#"]'));

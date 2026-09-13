@@ -5,39 +5,42 @@
    ------------------------------------------------------------------ */
 
 :root {
-  /* Colour — warm editorial palette from the Figma file */
-  --color-bg: #f9f7f3;
-  --color-bg-elevated: #fdfcfa;
-  --color-ink: #1c1a17;
-  --color-ink-soft: #4a463f;
-  --color-ink-muted: #8a8378;
-  --color-ink-faint: #b5ada1;
-  --color-hairline: #e6e0d6;
-  --color-accent: #c4634a;
-  --color-accent-hover: #ad5540;
-  --color-accent-soft: #f3e4dd;
-  --color-image-frame: #e9e3d9;
+  /* Colour — cool slate palette from the Figma file */
+  --color-bg: #f5f8fc;
+  --color-bg-elevated: #ffffff;
+  --color-ink: #0f172a;
+  --color-ink-soft: #475569;
+  --color-ink-muted: #64748b;
+  --color-ink-faint: #94a3b8;
+  --color-hairline: #e2e8f0;
+  --color-surface: #e2e8f0;
+  --color-accent: #4f94cc;
+  --color-accent-hover: #3b7cb0;
+  --color-accent-soft: #dfeaf6;
+  --color-image-frame: #e8edf4;
 
   /* Type */
   --font-serif: "Cormorant Garamond", "Cormorant", Georgia, "Times New Roman", serif;
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
-  /* Fluid type scale (min → max between 360px and 1440px viewports) */
-  --text-display: clamp(2.375rem, 1.5rem + 3.6vw, 4.5rem);    /* hero */
-  --text-h2: clamp(1.875rem, 1.4rem + 1.8vw, 2.875rem);       /* section headlines */
-  --text-h3: clamp(1.5rem, 1.25rem + 0.9vw, 1.875rem);        /* skill titles */
-  --text-card-title: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);  /* work card */
-  --text-body-lg: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-  --text-body: 0.9375rem;
-  --text-small: 0.8125rem;
-  --text-label: 0.6875rem;                                     /* eyebrows, meta */
+  /* Fluid type scale (min → max between 390px and 1440px viewports) */
+  --text-display: clamp(2.375rem, 1.66rem + 2.8vw, 4.1875rem);     /* hero — 67px */
+  --text-h2-lead: clamp(2.25rem, 1.6rem + 2.67vw, 4rem);           /* contact — 64px */
+  --text-h2: clamp(2rem, 1.44rem + 2.22vw, 3.5rem);                /* about — 56px */
+  --text-card-title: clamp(1.375rem, 1.24rem + 0.57vw, 1.75rem);   /* work card — 28px */
+  --text-email: clamp(1.375rem, 1.24rem + 0.57vw, 1.75rem);        /* email — 28px */
+  --text-body-lg: clamp(1rem, 0.93rem + 0.29vw, 1.21875rem);       /* hero intro — 19.5px */
+  --text-body: 1rem;
+  --text-small: 0.84375rem;                                         /* 13.5px */
+  --text-label: 0.75rem;                                            /* eyebrows, meta */
 
-  --leading-tight: 1.05;
+  --leading-tight: 1.06;
   --leading-snug: 1.2;
-  --leading-body: 1.65;
+  --leading-body: 1.69;
+  --leading-intro: 1.58;
 
-  --tracking-label: 0.08em;
-  --tracking-display: -0.015em;
+  --tracking-label: 0.02em;
+  --tracking-display: normal;
 
   /* Spacing — 4px base */
   --space-1: 0.25rem;
@@ -51,9 +54,15 @@
   --space-9: 6rem;
   --space-10: 8rem;
 
-  --section-gap: clamp(5rem, 3rem + 8vw, 10rem);
+  /* Rhythm measured off the 1440px design frame */
+  --section-gap: clamp(4.5rem, 2rem + 11.3vw, 12.1875rem);  /* 195px — hero → work */
+  --section-gap-wide: clamp(5.5rem, 3rem + 15.14vw, 16.625rem); /* 266px — work → about */
+  --section-gap-tight: clamp(4rem, 2rem + 9.1vw, 10.1875rem);   /* 163px — about → contact */
+  --header-top: clamp(2.5rem, 0.5rem + 9.82vw, 9.34rem);    /* 149px above the nav row */
+  --grid-gap: clamp(1.25rem, 0.6rem + 1.56vw, 2rem);        /* 32px work grid columns */
+  --about-gap: clamp(2rem, 0.5rem + 5.15vw, 5.125rem);      /* 82px about columns */
   --gutter: clamp(1.25rem, 0.5rem + 3vw, 3rem);
-  --content-max: 1440px;
+  --content-max: 1212px; /* 1116px of content + the 48px gutters either side */
 
   /* Shape */
   --radius-sm: 2px;
