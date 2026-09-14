@@ -210,7 +210,7 @@ ul {
 .icon-links {
   display: flex;
   align-items: center;
-  gap: clamp(var(--space-3), 1.4vw, 1.3125rem);
+  gap: clamp(var(--space-4), 2.6vw, 2.375rem);
 }
 
 .icon-link {
