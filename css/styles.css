@@ -266,12 +266,12 @@ ul {
 }
 
 /* Faded portrait sitting behind the headline, bleeding past the grid.
-   The wash and its fade are baked into the asset's alpha channel, so it can
-   run past the hairline (as in the design) without covering it. */
+   The wash and its fade are baked into the asset's alpha channel. The frame
+   ends exactly on the hero hairline so the line never crosses the photo. */
 .hero__backdrop {
   position: absolute;
   z-index: -1;
-  bottom: -3.125rem;
+  bottom: 0;
   right: min(4.8vw, 4.3125rem);
   width: min(43vw, 38.6875rem);
   height: auto;

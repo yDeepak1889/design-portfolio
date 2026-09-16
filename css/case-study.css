@@ -712,13 +712,21 @@ a {
   }
 }
 
-.cs-screens img {
-  width: 100%;
-  height: auto;
+/* Screens are cropped from the design at slightly different widths, so the
+   row is normalised to one aspect ratio and the images cover it. */
+.cs-screens li {
+  aspect-ratio: 23 / 50;
+  overflow: hidden;
   border-radius: 6px;
 }
 
-.cs-screens--framed img {
+.cs-screens img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cs-screens--framed li {
   border: 2px solid #fff;
   border-radius: 4px;
 }
