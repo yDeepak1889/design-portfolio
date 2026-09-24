@@ -330,10 +330,6 @@ ul {
   color: var(--color-ink);
 }
 
-.section__head .section__index {
-  color: var(--color-accent);
-}
-
 /* ---------- Work grid ---------- */
 .work-grid {
   display: grid;
@@ -345,11 +341,6 @@ ul {
   .work-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-}
-
-.work-card {
-  display: block;
-  color: inherit;
 }
 
 /* Featured case study card — spans the grid, dark Break palette */
@@ -534,81 +525,6 @@ ul {
   .feature-card:focus-visible .feature-card__media img {
     transform: scale(1.02);
   }
-}
-
-.work-card__media {
-  aspect-ratio: 544 / 500;
-  overflow: hidden;
-  border-radius: var(--radius-sm);
-  background: var(--color-image-frame);
-}
-
-.work-card__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform var(--duration-slow) var(--ease-out);
-  will-change: transform;
-}
-
-.work-card:hover .work-card__media img,
-.work-card:focus-visible .work-card__media img {
-  transform: scale(1.03);
-}
-
-.work-card__meta,
-.work-card__row {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--space-4);
-}
-
-.work-card__meta {
-  margin-top: 0.875rem;
-}
-
-.work-card__year {
-  color: var(--color-ink-muted);
-  font-size: var(--text-label);
-  letter-spacing: 0.02em;
-}
-
-.work-card__row {
-  margin-top: 0.3125rem;
-}
-
-.work-card__title {
-  font-family: var(--font-serif);
-  font-size: var(--text-card-title);
-  font-weight: 400;
-  line-height: var(--leading-snug);
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-}
-
-.work-card__title svg {
-  width: 14px;
-  height: 14px;
-  opacity: 0;
-  transform: translate(-4px, 4px);
-  transition:
-    opacity var(--duration-base) var(--ease-out),
-    transform var(--duration-base) var(--ease-out);
-}
-
-.work-card:hover .work-card__title svg,
-.work-card:focus-visible .work-card__title svg {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-.work-card__tags {
-  font-size: var(--text-small);
-  font-style: italic;
-  color: var(--color-ink-muted);
-  text-align: right;
 }
 
 /* ---------- About ---------- */
