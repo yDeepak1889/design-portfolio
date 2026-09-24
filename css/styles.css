@@ -453,14 +453,22 @@ ul {
 }
 
 .feature-card__stats dd {
-  font-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.625rem);
+  --stat-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.625rem);
+  margin: 0;
+  font-size: var(--stat-size);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.01em;
 }
 
 @media (min-width: 600px) {
+  .feature-card__stats {
+    container-type: inline-size;
+  }
+
+  /* Values stay on one line, so cap the size to what fits the narrowest two-column box */
   .feature-card__stats dd {
+    font-size: min(var(--stat-size), 7.25cqi);
     white-space: nowrap;
   }
 }
@@ -775,10 +783,6 @@ ul {
   flex-wrap: wrap;
   align-items: center;
   gap: clamp(var(--space-4), 2vw, var(--space-6));
-}
-
-.site-footer__note {
-  color: var(--color-ink-faint);
 }
 
 .site-footer .link-underline {
