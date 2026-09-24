@@ -302,16 +302,19 @@ ul {
 }
 
 /* ---------- Sections ---------- */
+/* Nav jumps land just above the heading instead of at the top of the spacing */
 .section {
-  padding-top: var(--section-gap);
+  --section-pad: var(--section-gap);
+  padding-top: var(--section-pad);
+  scroll-margin-top: calc(var(--space-7) - var(--section-pad));
 }
 
 #about {
-  padding-top: var(--section-gap-wide);
+  --section-pad: var(--section-gap-wide);
 }
 
 #contact {
-  padding-top: var(--section-gap-tight);
+  --section-pad: var(--section-gap-tight);
 }
 
 .section__head {
